@@ -1,1 +1,96 @@
+:root {
+    font-size: 16px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
+
+  body{
+      height: 600px;
+      background-image: url("https://thumbs.dreamstime.com/b/space-wallpaper-banner-background-stunning-view-cosmic-galaxy-planets-space-objects-elements-image-space-209227412.jpg");
+ 
+  }
+.board-game{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#game-start{
+    display: flex;
+    justify-content: center;
+   margin:auto;
+   margin-top : 10px;
+   padding : 10px;
+   border-radius: 20%;
+}
+
+#game-start:hover{
+ background-color: yellow;
+ color: black;
+  padding : 10px;
+  border-radius: 20%;
+} 
+
+.title {
+    color : yellow ;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    margin-top : 1px;
+    
+}
+
+#restart{
+    display: flex;
+    justify-content: center;
+   margin:auto;
+   margin-top : 10px;
+   padding : 10px;
+   border-radius: 20%; 
+}
+
+#restart:hover{
+    background-color: yellow;
+    color: black;
+     padding : 10px;
+     border-radius: 20%;
+}
+
+#canvas {
+    border-radius: 7%;
+}
+
+#score-board{
+    color : yellow ;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.instructions{
+    color : yellow ;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.instructions2{
+    color : yellow ;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
