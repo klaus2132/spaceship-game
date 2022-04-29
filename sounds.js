@@ -10,14 +10,3 @@ class Sounds {
     gameOver = new Audio("./sounds/gameOver.wav");
 }
 
-
-
-
-//MAIN SONG
-
-
-
-
-
-//GAMEOVER SOUND
-

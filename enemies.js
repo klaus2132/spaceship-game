@@ -20,4 +20,4 @@ class Enemies {
       if (!this.img) this.ctx.fillRect(this.x, this.y, this.width, this.height);
       else this.ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
-  }
+}

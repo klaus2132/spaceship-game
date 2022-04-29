@@ -3,7 +3,7 @@ class Player {
       this.ctx = ctx;
       this.width = 420;
       this.height = 150;
-      this.y = 200;//this.ctx.canvas.height - this.height;
+      this.y = 225;
       this.x = 0;
       this.spritesCount = 5;
       this.spriteNumber = 0;
@@ -14,12 +14,12 @@ class Player {
 
 
     up(){
-        console.log('were going up');
+        //console.log('were going up');
         if(this.y != 0) this.y -= 30;
     }
 
     down(){
-        console.log('were going down');
+        //console.log('were going down');
         if(this.y != -0) this.y += 30;
     }
 
@@ -27,6 +27,8 @@ class Player {
         //this.y += this.speedY;
     
       }
+
+      
 
 
   
@@ -36,7 +38,7 @@ class Player {
   
     draw(frameId) {
       this.animate(frameId);
-      const sx = 0;//this.spriteNumber * this.width;
+      const sx = 0;
       const sy = this.spriteNumber * 150;
       const sWidth = this.width;
       const sHeight = this.height;

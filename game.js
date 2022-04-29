@@ -54,7 +54,7 @@ start() {
           this.ctx.textAlign = "center";
           this.ctx.font = "bold 32px 'Press Start 2P'";
           this.ctx.fillText(
-              `That hurt...`,
+              `That hurt...but hey! Your score was ${this.points}`,
               this.ctx.canvas.width/2,
               this.ctx.canvas.height/2
           );
@@ -168,6 +168,7 @@ setEventHandlers() {
             window.cancelAnimationFrame(this.frameId)
             this.screen = 2;
             this.start();
+            this.sounds.pause("main")
             this.sounds.play("gameOver");
         };
       }
@@ -176,10 +177,17 @@ setEventHandlers() {
 
       printPoints(){
         if(this.checkCollisionsWithAstro()){
-            console.log('fghjklølkjhgf')
-             this.scoreBoard.innerText = this.points +1;
+             this.scoreBoard.innerText = this.points +=1;
             }
       }
+
+//--------------------------------remove astro at impact--------------------------------
+
+saveAstro(element){
+    if(this.checkCollisionsWithAstro()){
+        this.astro.splice(this.astro.indexOf(element), 1)
+    }
+}
 
 //-------------------------------------resetFunction----------------------------------
 
@@ -189,11 +197,9 @@ setEventHandlers() {
         this.enemies = [];
         this.astro = [];
         this.sounds.play("main");
+        this.scoreBoard.innerText = 0;
         this.points = 0;
-      }
-
-//--------------------------------------gameOverScreen--------------------------------
-
+       }
 
 //-----------------------------------------play-----------------------------------------
   
@@ -201,6 +207,7 @@ setEventHandlers() {
       this.background.move(this.frameId);
       this.player.move(this.frameId);
       this.printPoints();
+      this.saveAstro();
       this.generateEnemies();
       this.generateAstro();
       this.enemies.forEach((obstacle) => obstacle.move(this.frameId));
